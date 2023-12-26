@@ -1,5 +1,6 @@
 import "./Signup.css"
 import {useState} from "react";
+import {useSignup} from "../../hooks/useSignup";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -7,6 +8,7 @@ export default function Signup() {
   const [username, setUsername] = useState("");
   const [thumbnail, setThumbnail] = useState(null);
   const [thumbnailError, setThumbnailError] = useState(null);
+  const { signup, error, isPending } = useSignup();
 
   const handleFileChange = (e) => {
     setThumbnail(null); // if some file was chosen by mistake
@@ -32,7 +34,7 @@ export default function Signup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(email, password, username, thumbnail)
+    signup(email, password, username, thumbnail);
   }
 
 
@@ -57,7 +59,9 @@ export default function Signup() {
           <input type="file" onChange={handleFileChange} required />
         </label>
         {thumbnailError && <div className="error">{thumbnailError}</div>}
-        <button className="btn">Signup</button>
+        {!isPending && <button className="btn">Signup</button>}
+        {isPending && <button className="btn">Loading...</button>}
+        {error && <div className="error">{error}</div>}
       </form>
     </div>
   )
