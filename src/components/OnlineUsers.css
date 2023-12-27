@@ -19,6 +19,15 @@
     align-items: center;
     margin: 20px auto;
 }
+.user-list .user-list-item .online-mark {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #0ebb50;
+    margin-right: 10px;
+    margin-top: 2px;
+}
 .user-list .avatar {
     margin-left: 10px;
     width: 40px;
