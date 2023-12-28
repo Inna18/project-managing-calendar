@@ -71,7 +71,8 @@ export default function Create() {
       dueDate: timestamp.fromDate(new Date(dueDate)),
       category: category.value,
       createdBy,
-      assignedUserList
+      assignedUserList,
+      comments: []
     }
 
     await addDocument(project);
