@@ -2,6 +2,7 @@ import {useState} from "react";
 import {useAuthContext} from "../../hooks/useAuthContext";
 import {timestamp} from "../../firebase/config";
 import {useFirestore} from "../../hooks/useFirestore";
+import Avatar from "../../components/Avatar";
 
 
 export default function ProjectComments({ project }) {
@@ -30,7 +31,24 @@ export default function ProjectComments({ project }) {
 
   return (
     <div className="project-comments">
-      <h2 className="page-title">Comments</h2>
+      <h4 className="page-title">Comments</h4>
+      <ul>
+        {project.comments && project.comments.map(comment => (
+          <li key={comment.id}>
+            <div className="comment-author">
+              <Avatar src={comment.photoUrl} />
+              <p>{comment.displayName}</p>
+            </div>
+            <div className="comment-date">
+              <p>{comment.createdAt.toDate().toDateString()}</p>
+            </div>
+            <div className="comment-content">
+              <p>{comment.content}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+
       <form onSubmit={(e) => handleSubmit(e)}>
         <label>
           <div>Add New Comment:</div>
