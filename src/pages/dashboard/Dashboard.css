@@ -1,0 +1,21 @@
+.project-filter {
+    display: flex;
+    margin-top: 10px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 10px;
+}
+.project-filter .filters {
+    padding: 0 5px 0;
+    display: flex;
+}
+.project-filter .filters .filter {
+    padding: 0 5px 0;
+    border-right: 1px solid lightgray;
+    font-weight: 600;
+    color: var(--text-color);
+    cursor: pointer;
+}
+.project-filter .filters .filter:last-child {
+    border-right: 0
+}
