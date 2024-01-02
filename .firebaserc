@@ -1,6 +1,7 @@
 {
   "projects": {
-    "staging": "project-management-site-9400a"
+    "staging": "project-management-site-9400a",
+    "default": "project-management-site-9400a"
   },
   "targets": {},
   "etags": {}
