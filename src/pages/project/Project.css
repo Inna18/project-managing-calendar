@@ -22,6 +22,17 @@
     line-height: 1.8em;
     font-size: 0.9em;
 }
+.project-summary .category {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 0 6px;
+    color: var(--heading-color);
+    line-height: 1.8em;
+    font-size: 0.8em;
+    background: lightgray;
+    border-radius: 4px;
+
+}
 .project-summary h4 {
     color: var(--text-color);
     font-size: 0.9em;
