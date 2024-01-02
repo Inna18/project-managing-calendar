@@ -12,10 +12,20 @@
 .project-filter .filters .filter {
     padding: 0 5px 0;
     border-right: 1px solid lightgray;
-    font-weight: 600;
+    font-weight: 400;
     color: var(--text-color);
     cursor: pointer;
 }
+.project-filter .filters .active-filter {
+    padding: 0 5px 0;
+    border-right: 1px solid lightgray;
+    font-weight: 600;
+    color: var(--primary-color);
+    cursor: pointer;
+}
 .project-filter .filters .filter:last-child {
+    border-right: 0
+}
+.project-filter .filters .active-filter:last-child {
     border-right: 0
 }
