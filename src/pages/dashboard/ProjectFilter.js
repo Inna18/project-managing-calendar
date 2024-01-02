@@ -2,7 +2,8 @@ import "./Dashboard.css"
 
 const filters = [
   {value: "all", label: "all"},
-  {value: "mine", label: "mine"},
+  {value: "byMe", label: "by me"},
+  {value: "assigned", label: "assigned"},
   {value: "development", label: "development"},
   {value: "design", label: "design"},
   {value: "marketing", label: "marketing"},

@@ -18,7 +18,9 @@ export default function Dashboard() {
       switch (currentFilter) {
         case "all":
           return true;
-        case "mine":
+        case "byMe":
+          return doc.createdBy.id === user.uid;
+        case "assigned":
           let assignedUser = false;
           doc.assignedUserList.forEach(u => {
             if (user.uid === u.id) assignedUser = true;
