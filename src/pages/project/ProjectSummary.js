@@ -19,7 +19,8 @@ export default function ProjectSummary({ project }) {
   return (
     <div className="project-summary">
       <h2 className="page-title">{project.title}</h2>
-      <div className="due-date">Due by {project.dueDate.toDate().toDateString()}</div>
+      <div className="created-by">Created by: {project.createdBy.displayName}</div>
+      <div className="due-date">Due by: {project.dueDate.toDate().toDateString()}</div>
       <div className="details">{project.details}</div>
       <span className="category">#{project.category}</span>
       <h4>Assigned to:

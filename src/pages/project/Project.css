@@ -11,8 +11,12 @@
     padding: 30px;
     border-radius: 4px;
 }
+.project-summary .created-by {
+    color: var(--text-color);
+    line-height: 1.8em;
+    font-size: 0.9em;
+}
 .project-summary .due-date {
-    margin: 10px 0;
     font-size: 0.9em;
     color: var(--text-color);
 }
